@@ -1,0 +1,29 @@
+1.Why main() has been declared as public static void?
+-------------------------------------------------------------
+A:>"public": This keyword makes the main() function accessible from outside of the class in which it is defined. 
+    This is necessary because the operating system or runtime environment needs to be able to access 
+    the function to start the program.
+    
+    "static": This keyword indicates that the main() function is a class-level method, 
+    which means that it can be called without creating an instance of the class. 
+    This is necessary because the operating system or runtime environment needs 
+    to be able to call the function before any objects are created.
+    
+    "void": This keyword indicates that the main() function does not return a value.
+     This is because the operating system or runtime environment does not expect the function to return a value, 
+     and it is not necessary for the function to do so.
+     
+2. Can we change the order of public static void to static public void or public void static?
+------------------------------------------------------------------------------------------------
+Ans:> Yes, but we can't keep public void static becoz we can change  but return type should be before method name.
+
+3. Can we override the main() ?
+------------------------------------
+Ans:> yes we can but not recomented, If you declare the main() is static we can't override in that class and also can't over ride in child class.
+
+4. can we overload the main method?
+------------------------------------------
+Ans:> Yes, we can by passing different arrguments.
+
+
+    
