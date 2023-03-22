@@ -18,28 +18,32 @@ public class EmployeeNthSalry {
 		Employee e10 = new Employee(1010,"Sunil",13000.0,05);
 		List<Employee> empList = List.of(e1,e2,e3,e4,e5,e6,e7,e8,e9,e10);
 		//find the nth number of highest salary
-		double xyz=findNthHighestSalary(empList, 3);
-		if(empList!=null)
-		empList.forEach(s->{
-					if(s.getEmpSalary()==xyz)
-						System.out.println(s);
-				});
+		Double xyz=findNthHighestSalary(empList, 3);
+			if(xyz!=null) {
+			empList.forEach(s->{
+						if(s.getEmpSalary()==xyz)
+							System.out.println(s);
+					});
+			}
+			else
+				System.out.println("Employee Not available");
+		
 				}
-	public static Double findNthHighestSalary(List<Employee> employees, int n) {
-	    // Create a HashSet to remove duplicates
-	    Set<Double> salaries = new HashSet<>();
-	    
-	    // Add all salaries to the HashSet
-	    for (Employee e : employees) {
-	        salaries.add(e.getEmpSalary());
-	    }
-	    
-	    // Convert the HashSet to an ArrayList and sort it in descending order
-	    List<Double> sortedSalaries = new ArrayList<>(salaries);
-	    Collections.sort(sortedSalaries, Collections.reverseOrder());
-	    
-	    // Return the nth highest salary
-	    return sortedSalaries.get(n-1);
-	}
+						public static Double findNthHighestSalary(List<Employee> employees, int n) {
+								    // Create a HashSet to remove duplicates
+								    Set<Double> salaries = new HashSet<>();
+								    
+								    // Add all salaries to the HashSet
+								    for (Employee e : employees) {
+								        salaries.add(e.getEmpSalary());
+								    }
+								    
+								    // Convert the HashSet to an ArrayList and sort it in descending order
+								    List<Double> sortedSalaries = new ArrayList<>(salaries);
+								    Collections.sort(sortedSalaries, Collections.reverseOrder());
+								    
+								    // Return the nth highest salary
+								    return sortedSalaries.get(n-1);
+								}
 
 }
