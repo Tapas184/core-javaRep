@@ -12,6 +12,7 @@ public class SingleTone {
 		if(instacne==null) {//check thr object is already created or not
 			synchronized (SingleTone.class) {//in multi threading enviroment one thread can access this class at a time
 				if(instacne==null) {
+					instacne=new SingleTone();
 				}
 			}
 		}
