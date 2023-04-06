@@ -1,3 +1,4 @@
+
 package com.singleton.test;
 
 import java.io.FileInputStream;

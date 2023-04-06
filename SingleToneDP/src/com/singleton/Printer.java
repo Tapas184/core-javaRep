@@ -23,7 +23,7 @@ public class Printer{
 	}
 
 	// for visible Out side of the class we should take public modifire and Static
-	// for without object we can call this method
+	// for without create  object we can call this method by class name
 	// return type should be class type
 
 	/*public static Printer getInstance() {
