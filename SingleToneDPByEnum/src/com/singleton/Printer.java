@@ -12,13 +12,13 @@ public enum Printer {
 
 }
 /**@Advantages of taking single tone as enum
- * Easy to devlop
- * It perform eager instantiation of it's constants so no multithreading issue
- * cloning is not possible on enum based object, because cone() is akready overriden in
- * extended enum class
+ * Easy to develop
+ * It perform eager instantiation of it's constants so no multi-threading issue
+ * cloning is not possible on enum based object, because cone() is already overridden in
+ * extended Enum class
  * Enum is implementing serialization internally,
- * per jvm for enum one object will be created internally.
- * no worry about deserialization
+ * per jvm for Enum one object will be created internally.
+ * no worry about de-serialization
  * no constructor is there so no worry about reflection api
  * if we try to create object throw reflection api we will get IllegalArgumentException
  */
