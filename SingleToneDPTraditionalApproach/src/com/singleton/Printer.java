@@ -5,16 +5,17 @@ import com.singleton.test.Commons;
 public class Printer extends Commons{
 
 	private static Printer INSTANCE;
-	private static boolean flag=false;
+	private boolean flag;
 	
 	private Printer() {
-		if(flag==true)
+		if(flag) {
 		throw new IllegalArgumentException("Object already created");
+		}
 		flag=true;
 	}
 	
 	public static Printer getInstance() {
-		if(INSTANCE==null)
+		if(INSTANCE == null) 
 			synchronized (Printer.class) {
 				if(INSTANCE==null)
 					INSTANCE=new Printer();

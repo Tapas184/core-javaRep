@@ -12,7 +12,6 @@ public class DuplicateCharacter {
 			if(h.contains(c)) {
 				System.out.print(c+" ");
 			}//if
-			else 
 			h.add(c);
 		}
 

@@ -23,14 +23,14 @@ public class Java8Example_01 {
 		/*	Map<String,Double> averageAge=personList.stream().
 					collect(Collectors.groupingBy(Person::getGender,Collectors.averagingDouble(Person::getAge)));
 		System.out.println(averageAge);*/
-		//no.4:: sorted person by age in assending order
+		//no.4:: sorted person by age in ascending order
 		//personList.stream().sorted((o1,o2)->o1.getAge()>o2.getAge()?-1:o1.getAge()<o2.getAge()?1:0).forEach(System.out::println);
 		// no.5:: I want to print the person whose age between 20 to 25
 		//personList.stream().filter(s->s.getAge()>=20 && s.getAge()<=25).forEach(System.out::println);
-		//no.6:: print sorted the person as per length in desending
+		//no.6:: print sorted the person as per length in descending
 		   //personList.stream().sorted((o1, o2) ->o1.getName().length()>o2.getName().length()?-1:o1.getName().length()<o2.getName().length()?1:0).forEach(System.out::println);
 		//no.7:: sorting Person by Alphabetically
-		personList.stream().sorted((o1, o2) ->o1.getName().compareToIgnoreCase(o2.getName())).forEach(System.out::println);
+		//personList.stream().sorted((o1, o2) ->o1.getName().compareToIgnoreCase(o2.getName())).forEach(System.out::println);
 	}
 
 }

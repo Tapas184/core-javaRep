@@ -24,8 +24,7 @@ public class EmployeeNthSalry {
 						if(s.getEmpSalary()==xyz)
 							System.out.println(s);
 					});
-			}
-			else
+			}else
 				System.out.println("Employee Not available");
 		
 				}
