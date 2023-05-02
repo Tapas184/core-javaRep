@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 //adding 2 array element in one array
 public class AddingArrayElement {
-
 	public static void main(String[] args) {
 
 		int [] array1 = { 1, 3, 4, 5, 6, 7, 4, 3, 4 };// array 1

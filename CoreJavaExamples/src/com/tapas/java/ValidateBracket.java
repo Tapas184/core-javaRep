@@ -43,7 +43,7 @@ public class ValidateBracket {
          	       return false;
             }else
      	   stack.push(c);
-            if(stack.size()==0) {
+            if(stack.isEmpty()) {
         	return true;
             }
        }//for

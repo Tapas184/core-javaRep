@@ -7,15 +7,15 @@ import java.util.List;
 public class DivisibleBy2 {
 
 	public static void main(String[] args) {
-		/*List<Integer> list = Arrays.asList(2,4,0,6,8);//java 8 features
-		List<Integer> list2 = List.of(2,4,0,6,8);//java 11 features
+		List<Integer> list = Arrays.asList(2,4,0,6,8);//java 8 features
+		//List<Integer> list2 = List.of(2,4,0,6,8);//java 11 features
 		boolean result=list.stream().allMatch(s->s%2==0);
 		
 		if(result) {
 			System.out.println("All numbers are divisible by 2");
 		}
 		else
-			System.out.println("All numbers are not divisible by 2");*/
+			System.out.println("All numbers are not divisible by 2");
 		//==================With out java 8 feature==========================
 		/*Integer[] in1 = new Integer[] {2,4,6,8}; //I create a 
 		if(checkNumber(in1)) {//checking the method

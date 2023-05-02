@@ -8,15 +8,16 @@ public class Printer{
 	 static we are using this inside the static method instance variable we can't
 	 use so need to take static variable
 	  */
-	 
-
 	private static Printer INSTANCE;
+
+	
 	/**private static Printer INSTANCE = new
 	 * Printer();(Soln-MultiThreading-EagerInstanciation)
 	 * for Reflection API solution for temporary
 	 */
-	
 	private static boolean flag=false;
+	
+	
 	/**for Out side can't create Object so we take private Constructor
 	 * 
 	 */ 
