@@ -1,7 +1,5 @@
 package com.singleton;
 
-import com.singleton.test.Commons;
-
 public class Printer{
 	 /**for holding the created object 
 	  * private for we can use this within the class
@@ -15,14 +13,14 @@ public class Printer{
 	 * Printer();(Soln-MultiThreading-EagerInstanciation)
 	 * for Reflection API solution for temporary
 	 */
-	private static boolean flag=false;
+	private static boolean flag;
 	
 	
 	/**for Out side can't create Object so we take private Constructor
 	 * 
 	 */ 
 	private Printer() {
-		if(flag==true)
+		if(flag)
 			throw new IllegalArgumentException("object already created");
 		flag=true;
 		System.out.println("0-Param constructor");
@@ -75,7 +73,7 @@ public class Printer{
 	 */
 		@Override
 		public Object clone() throws CloneNotSupportedException {
-			return  new  CloneNotSupportedException("Clone is not Supported Exception");
+			throw  new  CloneNotSupportedException("Clone is not Supported Exception");
 		}
 		
 		//===============solution for Deserialization-Way-1=====================
