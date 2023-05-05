@@ -1,6 +1,8 @@
 package com.tapas.java.interviewquestions;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -18,7 +20,50 @@ public static void main(String[] args) {
 	Map<String, Integer> playerlist = list.stream()
 			                        .filter(s->s.getScore()>40)
 			                        .collect(Collectors.toMap(Player::getName, Player::getScore));
-System.out.println(playerlist);	 
-}
+	System.out.println(playerlist);
+	list.stream()
+	    .filter(s->s.getScore()==50)
+	    .collect(Collectors.groupingBy(Player::getScore))
+	    .forEach((s,y)->{
+	    	System.out.print("Score: "+s+"=");
+	    System.out.println(y.stream()
+	    	                .map(Player::getName)
+	    	                .toList());
+	    });
+
+	list.stream()
+	    .collect(Collectors.groupingBy(Player::getScore))
+	    .forEach((x,y)->{
+	    	System.out.print("Score: "+x+"=");
+	    	System.out.println(y.stream()
+	    			            .map(Player::getName)
+	    			            .toList());
+	    });
+	
+	list.stream()
+	    .sorted(Comparator.comparing(Player::getScore))
+	    .toList()
+	    .forEach(s->{
+	    	System.out.print(s.getName()+"="+s.getScore()+", ");
+	    });
+	    System.out.println();
+	list.stream()
+	    .sorted(Comparator.comparing(Player::getScore).reversed())
+	    .toList()
+	    .forEach(s->{
+	    	System.out.print(s.getName()+"="+s.getScore()+", ");
+	    });
+	System.out.println();
+	List<Player> list2 = list.stream()
+	    .sorted(Comparator.comparing(Player::getName))
+	    .toList();
+	list2.forEach(s->{
+		if(list2.size()-1==list2.indexOf(s))
+			System.out.print(s.getName());
+		else
+		System.out.print(s.getName()+", ");
+	});
+	    
+   }
 	
 }
