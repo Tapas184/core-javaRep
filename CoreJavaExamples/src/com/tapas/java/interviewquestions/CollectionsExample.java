@@ -1,4 +1,4 @@
-package com.tapas.java.interviewQuestions;
+package com.tapas.java.interviewquestions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,9 @@ public static void main(String[] args) {
 	list.add(new Player("Dbibrata", 0, "Bowler"));
 	list.add(new Player("Talib", 50, "Batting"));
 	//need playler name who scored more then 40
-	Map<String, Integer> playerlist = list.stream().filter(s->s.getScore()>40).collect(Collectors.toMap(Player::getName, Player::getScore));
+	Map<String, Integer> playerlist = list.stream()
+			                        .filter(s->s.getScore()>40)
+			                        .collect(Collectors.toMap(Player::getName, Player::getScore));
 System.out.println(playerlist);	 
 }
 	

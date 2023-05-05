@@ -1,4 +1,4 @@
-package com.tapas.java.interviewQuestions;
+package com.tapas.java.interviewquestions;
 
 public class Player {
 	private String name;

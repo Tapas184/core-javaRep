@@ -1,4 +1,4 @@
-package com.tapas.java.interviewQuestions;
+package com.tapas.java.interviewquestions;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,9 +1,9 @@
-package com.tapas.java.interviewQuestions;
+package com.tapas.java.interviewquestions;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Interview3 extends Interview4 {
+public class Interview3  {
 
 	public static void main(String[] args) {
 		List<Integer> l = new ArrayList<>();
@@ -17,11 +17,6 @@ public class Interview3 extends Interview4 {
 		l.remove(2);
 		System.out.println(l);
 		
-		Interview3 intr = new Interview3();
-		intr.example("tapas");
-	}
-	public static void main(int i) {
-		System.out.println("Over Loaded Main method");
 	}
  
 

@@ -1,4 +1,4 @@
-package com.tapas.java.interviewQuestions;
+package com.tapas.java.interviewquestions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +17,10 @@ public class TestClass {
 		playerList.add(p3);
 		playerList.add(p4);
 
-		Team team = new Team();/*
-								int total = team.totalScore(playerList);
-								System.out.println(total);*/
+		Team team = new Team();
+		int total = team.totalScore(playerList);
+		System.out.println("Team Score");
+		System.out.println(total);
 
 		Map<String, List<Player>> map = team.groupByType(playerList);
 		map.forEach((s, y) -> {

@@ -17,23 +17,24 @@ public class DivisibleBy2 {
 		else
 			System.out.println("All numbers are not divisible by 2");
 		//==================With out java 8 feature==========================
-		/*Integer[] in1 = new Integer[] {2,4,6,8}; //I create a 
+		Integer[] in1 = new Integer[] {2,4,6,8}; //I create a 
 		if(checkNumber(in1)) {//checking the method
 			System.out.println("All numbers are divisible bt Two");
 		}
 		else
 			System.out.println("All numbers are not divisible bt Two");
-		*/
-		/*List<Integer> list = Arrays.asList(3,5,9,5,2);
-		boolean atLeastDivisibleBy2=list.stream().anyMatch(s->s%2==0);
+		
+		List<Integer> list2 = Arrays.asList(3,5,9,5,2);
+		boolean atLeastDivisibleBy2=list2.stream()
+				                         .anyMatch(s->s%2==0);
 		
 		if(atLeastDivisibleBy2) 
 			System.out.println("At least one element in this array is devisiblle by 2");
 		else
-			System.out.println("At least one element is not divisible by 2");*/
+			System.out.println("At least one element is not divisible by 2");
 	}
 	
-	/*	public static boolean checkNumber(Integer[] in) {//create a method by passing Integer Array
+		public static boolean checkNumber(Integer[] in) {//create a method by passing Integer Array
 			
 			for(Integer inter:in) {//create for loop for checing all element are devisible by 2 or not
 				if(inter%2==0) {//checing the number
@@ -42,6 +43,6 @@ public class DivisibleBy2 {
 					return false;
 			}
 			return true;
-		}*/
+		}
 
 }

@@ -13,6 +13,7 @@ public class AddingArrayElement {
 		System.arraycopy(array1, 0, finalArray, 0, array1.length); // copy arrray1 element to finalArray
 		System.arraycopy(array2, 0, finalArray, array1.length, array2.length); // array2 element to finalArray
 		
+		
 		Arrays.sort(finalArray);// short the finalArray
 
 		for (int element : finalArray) {
