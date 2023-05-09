@@ -18,7 +18,6 @@ public class Amstrong {
 			a = a / 10;
 			sum = sum + (int) Math.pow(remain, count);
 		}
-		System.out.println(sum);
 		if (original == sum) {
 			System.out.println("Is a amstrong");
 		} else {

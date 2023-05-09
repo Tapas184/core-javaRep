@@ -10,8 +10,9 @@ public class ArrayExample2 {
 	public static void main(String[] args) {
 		
 		List<String> str = Arrays.asList("Tapas","Avijit","Subhankar");
-		String string = str.stream().map(s->s.toUpperCase())
-		            .collect(Collectors.joining(", "));
+		String string = str.stream()
+				           .map(s->s.toUpperCase())
+		                   .collect(Collectors.joining(", "));
 		System.out.println(string);
 		            
 	}

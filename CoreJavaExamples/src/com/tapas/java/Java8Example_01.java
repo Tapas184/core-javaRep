@@ -53,6 +53,11 @@ public class Java8Example_01 {
 		/*personList.stream()
 		           .sorted((o1, o2) ->o1.getName().compareToIgnoreCase(o2.getName()))
 		           .forEach(System.out::println);*/
+		personList.stream()
+		          .map(Person::getName)
+		          .sorted()
+		          .toList()
+		          .forEach(System.out::println);
 	}
 
 }

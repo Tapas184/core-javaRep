@@ -15,7 +15,8 @@ public class Java8Exmple2 {
 
 		List<Integer> list = Arrays.asList(1,2,5,2,5,1,25,1,2);
 		List<Integer> list2 = Arrays.asList(5,9,5,6,7,2,1,6,9);
-		List<Integer> mergeList = Stream.concat(list.stream(), list2.stream()).toList();
+		List<Integer> mergeList = Stream.concat(list.stream(), list2.stream())
+				                        .toList();
 		//Merge 2 list in one list
 		System.out.println(mergeList);
 	 //need to print unique list

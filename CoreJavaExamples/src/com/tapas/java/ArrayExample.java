@@ -12,11 +12,12 @@ public class ArrayExample {
 		List<Integer> list = Arrays.asList(10,5,9,8,15,78);
 		
 		int sum=list.stream()
-		    .reduce(0,Integer::sum);
+		             .reduce(0,Integer::sum);
+		
 		System.out.println(sum);
 		List<Integer> list2 = list.stream()
-		    .map(s->s+sum)
-		    .toList();
+		                          .map(s->s+sum)
+		                          .toList();
 		System.out.println(list2);
 		
 	}

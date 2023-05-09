@@ -16,7 +16,8 @@ public class EvenandOddNumberFound {
 				System.out.println("Even Number :: "+even);
 				System.out.println("Odd Number:: "+odd);*/
 	    //way -- 2
-	    Map<Boolean, List<Integer>> result=list.stream().collect(Collectors.partitioningBy(n ->n%2==0));
+	    Map<Boolean, List<Integer>> result=list.stream()
+	    		                               .collect(Collectors.partitioningBy(n ->n%2==0));
 	    
 	    List<Integer> evenNumber= result.get(true);
 	    List<Integer> oddNumber= result.get(false);

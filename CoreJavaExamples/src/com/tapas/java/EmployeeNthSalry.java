@@ -1,6 +1,8 @@
 package com.tapas.java;
 
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 //need to find nth salary of the given details
 public class EmployeeNthSalry {
@@ -18,31 +20,58 @@ public class EmployeeNthSalry {
 		Employee e10 = new Employee(1010,"Sunil",13000.0,05);
 		List<Employee> empList = List.of(e1,e2,e3,e4,e5,e6,e7,e8,e9,e10);
 		//find the nth number of highest salary
-		Double xyz=findNthHighestSalary(empList, 3);
-			if(xyz!=null) {
-			empList.forEach(s->{
-						if(s.getEmpSalary()==xyz)
-							System.out.println(s);
-					});
-			}else
-				System.out.println("Employee Not available");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Which position salary employee details required ?");
+		int posNumber = sc.nextInt();
+		sc.close();
+				Double xyz=findNthHighestSalary(empList, posNumber);
+					for(Employee e :empList) {
+						if(e.getEmpSalary()==xyz) {
+							System.out.println(e);
+						}
+					}
+				
 		
+		/*	                    Scanner sc = new Scanner(System.in);
+		                System.out.println("Enter which number of employee salary you want");
+		                int posNumber = sc.nextInt();
+		                sc.close();
+		                Map<Integer,List<Employee>> getEmployee= nthHighestSalary(empList,posNumber);
+		                getEmployee.forEach((s,y)->{
+		                	System.out.println(s+"th of HigestSalary is =");
+		                 y.forEach(System.out::println);
+		                });*/
 				}
-						public static Double findNthHighestSalary(List<Employee> employees, int n) {
-								    // Create a HashSet to remove duplicates
-								    Set<Double> salaries = new HashSet<>();
-								    
-								    // Add all salaries to the HashSet
-								    for (Employee e : employees) {
-								        salaries.add(e.getEmpSalary());
-								    }
-								    
-								    // Convert the HashSet to an ArrayList and sort it in descending order
-								    List<Double> sortedSalaries = new ArrayList<>(salaries);
-								    Collections.sort(sortedSalaries, Collections.reverseOrder());
-								    
-								    // Return the nth highest salary
-								    return sortedSalaries.get(n-1);
-								}
+										public static Double findNthHighestSalary(List<Employee> employees, int n) {
+												    // Create a HashSet to remove duplicates
+												    Set<Double> salaries = new HashSet<>();
+												    
+												    // Add all salaries to the HashSet
+												    for (Employee e : employees) {
+												        salaries.add(e.getEmpSalary());
+												    }
+												    
+												    // Convert the HashSet to an ArrayList and sort it in descending order
+												    List<Double> sortedSalaries = new ArrayList<>(salaries);
+												    Collections.sort(sortedSalaries, Collections.reverseOrder());
+												    
+												    // Return the nth highest salary
+												    return sortedSalaries.get(n-1);
+												}
+
+				/*private static Map<Integer, List<Employee>> nthHighestSalary(List<Employee> empList, int posNumber) {
+				        List<Double> empSalary = empList.stream()
+				           .map(Employee::getEmpSalary)
+				           .sorted(Comparator.reverseOrder())
+				           .distinct()
+				           .toList();
+				            
+				       List<Employee> listofEmp = empList.stream()
+				             .filter(s->s.getEmpSalary()==empSalary.get(posNumber-1))
+				              .collect(Collectors.toList());
+				       Map<Integer, List<Employee>> map = new HashMap<>();
+				map.put(posNumber, listofEmp);
+					return map;
+				}*/
 
 }
