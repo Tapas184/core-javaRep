@@ -1,6 +1,7 @@
  package com.tapas.java;
 
 import java.util.Arrays;
+import java.util.List;
 
 //adding 2 array element in one array
 public class AddingArrayElement {
@@ -16,9 +17,9 @@ public class AddingArrayElement {
 		
 		Arrays.sort(finalArray);// short the finalArray
 
-		for (int element : finalArray) {
-			System.out.print(" "+element); //Iterate all element present in finalArray
-		}
+			for (int element : finalArray) {
+				System.out.print(" "+element); //Iterate all element present in finalArray
+			}
 	}
 
 }

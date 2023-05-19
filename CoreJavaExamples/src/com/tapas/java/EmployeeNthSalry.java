@@ -24,14 +24,18 @@ public class EmployeeNthSalry {
 		System.out.println("Which position salary employee details required ?");
 		int posNumber = sc.nextInt();
 		sc.close();
-				Double xyz=findNthHighestSalary(empList, posNumber);
-					for(Employee e :empList) {
-						if(e.getEmpSalary()==xyz) {
-							System.out.println(e);
-						}
-					}
-				
-		
+		/*double xyz=findNthHighestSalary(empList, posNumber);
+			for(Employee e :empList) {
+				if(e.getEmpSalary()==xyz) {
+					System.out.println(e);
+				}
+			}//for				
+		*/	
+		Map<Integer, List<Employee>> nthHighestSalary = nthHighestSalary(empList, posNumber);
+		nthHighestSalary.forEach((s,t)->{
+			System.out.print(s+"=");
+			t.forEach(y->System.out.println(y));
+		});
 		/*	                    Scanner sc = new Scanner(System.in);
 		                System.out.println("Enter which number of employee salary you want");
 		                int posNumber = sc.nextInt();
@@ -59,7 +63,7 @@ public class EmployeeNthSalry {
 												    return sortedSalaries.get(n-1);
 												}
 
-				/*private static Map<Integer, List<Employee>> nthHighestSalary(List<Employee> empList, int posNumber) {
+				private static Map<Integer, List<Employee>> nthHighestSalary(List<Employee> empList, int posNumber) {
 				        List<Double> empSalary = empList.stream()
 				           .map(Employee::getEmpSalary)
 				           .sorted(Comparator.reverseOrder())
@@ -67,11 +71,11 @@ public class EmployeeNthSalry {
 				           .toList();
 				            
 				       List<Employee> listofEmp = empList.stream()
-				             .filter(s->s.getEmpSalary()==empSalary.get(posNumber-1))
+				             .filter(s->s.getEmpSalary()==(double)empSalary.get(posNumber-1))
 				              .collect(Collectors.toList());
 				       Map<Integer, List<Employee>> map = new HashMap<>();
 				map.put(posNumber, listofEmp);
 					return map;
-				}*/
+				}
 
 }
