@@ -28,7 +28,6 @@ public class DuplicateCharacter {
 		System.out.println(collect);
 		// Distinct character
 		Set<String> collect2 = list.stream()
-				                   .distinct()
 				                   .collect(Collectors.toSet());
 		System.out.println("Distinct Character Present in string");
 		System.out.println(collect2);
